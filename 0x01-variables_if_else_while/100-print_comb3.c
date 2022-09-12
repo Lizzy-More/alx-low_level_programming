@@ -1,34 +1,33 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - entry point
  *
- * Return: Always 0 (Success)
+ * Return: alway returns 0
+ *
  */
 int main(void)
 {
-	int d = 48, a = 48;
+	int i;
+	int j;
 
-	while (d < 58)
+	for (i = 10; i <= 19; i++)
 	{
-		a = 48;
-		while (a < 58)
+		for (j = 10; j <= 19; j++)
 		{
-			if (d != a && d < a)
+			if ((j % 10) > (i % 10))
 			{
-				putchar(d);
-				putchar(a);
-
-				if (!(d == 56 && a == 57))
+				putchar((i % 10) + '0');
+				putchar((j % 10) + '0');
+				if (i != 18 || j != 19)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			a++;
-		}
-		d++;
-		putchar('\n');
 
-		return (0);
+		}
 	}
+	putchar('\n');
+	return (0);
+}
