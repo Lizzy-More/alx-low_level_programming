@@ -8,13 +8,9 @@ include "main.h"
 
 int _isalpha(int c)
 {
-	if ((c >= 97 && c <= 123) || (c >= 65 && c <= 91))
-	{
-		Return(1);
-	}
+	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')))
+		return (1);
 	else
-	{
 		Return(0);
-	}
 }
 
